@@ -1,0 +1,30 @@
+<div id="thumbs">
+  <!-- ... more images here -->
+  <img src="images/small.png" />
+  <img src="thumb/image_3.jpg" />
+  <img src="thumb/image_2.jpg" />
+  <img src="thumb/image_1.jpg" />  
+</div>
+
+<div id="gallery">  <!-- overflow hidden -->
+  <div id="slider">  <!-- position absolute -->
+    <!-- ... more images here -->
+    <img src="image_4.jpg" />
+    <img src="image_3.jpg" />
+    <img src="image_2.jpg" />
+    <img src="image_1.jpg" />            
+  </div></div>
+<script src="js/jquery.js"></script>
+<script>
+    
+    var galH = 320; // SET HERE THE GALLERY HEIGHT
+
+var N = $('#slider img').length;
+
+$('#slider').css({ top: -galH*(N-1) }); // initial kick to bring the #slider to the first image
+
+$('#thumbs img').on('click',function(){
+  N = $(this).index();
+  $('#slider').stop(1).animate({top: -galH*N},1000);
+});
+</script>

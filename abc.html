@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Colorpicker for Twitter Bootstrap</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+  <link href="src/css/docs.css" rel="stylesheet">
+</head>
+<div class="well-lg" style="margin-left:50px">
+<input type="text" id="demo_size" value="#ffaa00" />
+</div>
+<style>
+    .colorpicker-2x .colorpicker-saturation {
+        width: 200px;
+        height: 200px;
+    }
+    .colorpicker-2x .colorpicker-hue,
+    .colorpicker-2x .colorpicker-alpha {
+        width: 30px;
+        height: 200px;
+    }
+    .colorpicker-2x .colorpicker-color,
+    .colorpicker-2x .colorpicker-color div{
+        height: 30px;
+    }
+</style>
+
+<script>
+    $(function(){
+        $('#demo_size').colorpicker({
+            customClass: 'colorpicker-2x',
+            sliders: {
+                saturation: {
+                    maxLeft: 200,
+                    maxTop: 200
+                },
+                hue: {
+                    maxTop: 200
+                },
+                alpha: {
+                    maxTop: 200
+                }
+            }
+        });
+    });
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="dist/js/bootstrap-colorpicker.js"></script>
+<script src="src/js/docs.js"></script>
+</body>
+
+</html>
